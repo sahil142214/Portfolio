@@ -1,0 +1,170 @@
+.console {
+    width: 720px;
+    height: 640px;
+    background-color: #0A1704;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Monaco, serif;
+    /*position: relative;*/
+}
+
+.console-header {
+    height: 30px !important;
+    background-color: #000000;
+    border-radius: 16px 16px 0 0;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.console-header div {
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    margin: 9px 6px;
+
+}
+
+.red-dot {
+    background-color: red;
+}
+
+.yellow-dot {
+    background-color: #FFBE00;
+}
+
+.green-dot {
+    background-color: #00DB47;
+}
+
+.console-footer {
+    height: 30px;
+    display: flex;
+    color: white;
+    font-size: 13px;
+    line-height: 30px;
+}
+
+
+.footer-0 {
+    width: 4.3%;
+    background-color: #AE4570;
+    border-bottom-left-radius: 16px;
+    text-align: center;
+}
+
+.footer-zsh {
+    width: 58%;
+    background-color: #3D65D3;
+}
+
+.footer-zsh span {
+    margin-left: 15px;
+}
+
+
+.footer-100 {
+    width: 9%;
+    background-color: #0A1704;
+    text-align: center;
+
+}
+
+.footer-user {
+    width: 28.7%;
+    background-color: #AE4570;
+    border-bottom-right-radius: 16px;
+}
+
+.footer-user span {
+    margin-left: 15px;
+}
+
+.console-body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    /*margin-top: 20px;*/
+
+}
+
+.console-text {
+    font-size: 16px;
+    margin-left: 35px;
+    line-height: 25px;
+}
+
+.input-div {
+    color: #1142CC;
+    font-family: Monaco, serif;
+    font-weight: 700;
+    margin-left: 35px;
+}
+
+.input-div p {
+    line-height: 30px;
+}
+
+
+.console-input {
+    margin-left: 5px;
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    color: #1142CC;
+    font-weight: 400;
+    width: 300px;
+    caret-color: transparent;
+    font-family: Monaco, serif;
+}
+
+.console-input:focus {
+    border: none;
+    outline: none;
+}
+
+.console-arrow {
+    font-family: Monaco, serif;
+    font-size: 17px;
+    transform: translateY(-2px);
+    display: inline-block;
+    color: #F45AED;
+
+}
+
+.input-cursor {
+    display: inline-block;
+    height: 19px;
+    width: 10px;
+    background-color: #1142CC;
+    transform: translate(-300px, 2px);
+    animation: blinking 1s infinite;
+}
+
+@keyframes blinking {
+    0% {
+        background-color: transparent;
+    }
+    47% {
+        color: #1142CC;
+    }
+    62% {
+        color: transparent;
+    }
+    97% {
+        color: transparent;
+    }
+    100% {
+        color: #1142CC;
+    }
+}
+
+.console-img{
+    margin-left: 30px;
+    margin-top: 5px;
+    height: 200px;
+}

@@ -1,0 +1,133 @@
+.about-wrapper {
+    width: 60%;
+    margin: 30px auto 0;
+    text-align: center;
+    font-family: Poppins, serif;
+    color: var(--text-color);
+}
+
+.about-wrapper h1 {
+    font-size: 36px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 150ms ease-in-out;
+}
+
+.about-wrapper h1 span {
+    color: var(--active-color);
+}
+
+.about-face {
+    margin: 20px auto 0;
+    height: 180px;
+    width: 180px;
+    border-radius: 98px;
+    background-color: var(--active-color);
+    padding: 8px 8px;
+}
+
+.about-face img {
+    height: 180px;
+}
+
+.about-text {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 30px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    /*justify-self: center;*/
+    align-items: center;
+}
+
+.barrier {
+    height: 200px;
+    width: 1px;
+    background-color: var(--text-color);
+
+}
+
+.left, .right {
+    width: 42%;
+    background-color: var(--about-bg);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--text-color);
+
+}
+
+.about-text span {
+    color: var(--specials);
+}
+
+.about-text .span-url {
+    color: var(--specials);
+    cursor: pointer;
+}
+
+.about-text a {
+    color: var(--specials);
+    text-decoration: none;
+}
+
+
+.resume-button {
+    margin-top: 10px;
+    width: 100%;
+    height: 46px;
+    border: none;
+    outline: none;
+    background-color: var(--active-color);
+    border-radius: var(--border-radius);
+    line-height: 46px;
+    font-family: Poppins, serif;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    /*transition: 0.5s ease;*/
+}
+
+.resume-button:hover {
+    opacity: 0.8;
+    /*border: 3px solid var(--active-color);*/
+    /*background-color: white;*/
+    /*color: var(--active-color);*/
+    /*line-height: 40px;*/
+    /*stroke: var(--active-color);*/
+}
+
+.resume-button svg {
+    transform: translateY(7px);
+    stroke: white;
+    margin-right: 5px;
+    stroke-width: 1px;
+    height: 24px;
+    /*transition: 0.5s ease;*/
+}
+
+/*.resume-button:hover path{*/
+/*    stroke: var(--active-color);*/
+/*}*/
+
+
+.about-wrapper div {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 150ms ease-in-out;
+}
+
+/*.left {*/
+
+/*    transform: translateX(-200px);*/
+/*    transition: 200ms ease-in-out;*/
+
+
+/*}*/
+
+/*.right {*/
+/*    transform: translateX(200px);*/
+
+/*}*/
