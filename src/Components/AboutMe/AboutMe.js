@@ -38,9 +38,8 @@ const AboutMe = () => {
                 <div className="left">
                     <p>Hello World 👋! I'm <span>Navjeet Bharti</span>, a first year undergraduate student
                         at <span>IIT Roorkee</span>. I've
-                        been an enthusiast of programming my whole life. I am interested in <span>web dev,
+                        been an enthusiast of programming my whole life. I am part of programming clubs, <span>PAG</span> and <span>MDG</span> at IIT Roorkee. I am interested in <span>web dev,
                             competitive programming, machine learning </span> and <span> blockchains </span> .
-                                            I have also been a math enthusiast since my childhood.
 
 
 
@@ -48,6 +47,8 @@ const AboutMe = () => {
                 </div>
                 <div className="barrier"></div>
                 <div className="right">
+                                                                I have also been a math enthusiast since my childhood.
+
                     You can find me on <span data-target="https://github.com/navjeet-py" className="span-url"
                                              onClick={externalLink}>GitHub</span>.
                      You can also see my blogs on <span data-target="https://medium.com/@navjeetbharti8877"
