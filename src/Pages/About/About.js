@@ -4,7 +4,7 @@ import AboutMe from "../../Components/AboutMe/AboutMe";
 
 const Home = () => {
     useEffect(()=>{
-        document.title = 'About • Navjeet'
+        document.title = 'About • Sahil'
     },[])
 
     return (

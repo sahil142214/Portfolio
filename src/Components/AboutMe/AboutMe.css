@@ -28,6 +28,9 @@
 
 .about-face img {
     height: 180px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 .about-text {
@@ -39,13 +42,13 @@
     justify-content: space-between;
     /*justify-self: center;*/
     align-items: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .barrier {
     height: 200px;
     width: 1px;
     background-color: var(--text-color);
-
 }
 
 .left, .right {
@@ -56,7 +59,6 @@
     font-size: 18px;
     line-height: 28px;
     color: var(--text-color);
-
 }
 
 .about-text span {
@@ -72,7 +74,6 @@
     color: var(--specials);
     text-decoration: none;
 }
-
 
 .resume-button {
     margin-top: 10px;
@@ -112,7 +113,6 @@
 /*    stroke: var(--active-color);*/
 /*}*/
 
-
 .about-wrapper div {
     opacity: 0;
     transform: translateY(20px);
@@ -131,3 +131,168 @@
 /*    transform: translateX(200px);*/
 
 /*}*/
+
+/* Responsive Styles */
+@media screen and (max-width: 1200px) {
+  .about-wrapper {
+    width: 80%;
+  }
+}
+
+/* Medium screens */
+@media screen and (max-width: 768px) {
+  .about-wrapper {
+    width: 90%;
+  }
+  
+  .about-text {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .left, .right {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .barrier {
+    height: 1px;
+    width: 80%;
+    margin: 10px 0;
+  }
+  
+  .about-wrapper h1 {
+    font-size: 30px;
+  }
+  
+  .about-face {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .about-face img {
+    height: 150px;
+  }
+  
+  .resume-button {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* Small screens - fix for below 550px */
+@media screen and (max-width: 550px) {
+  .about-wrapper {
+    width: 92%;
+    margin: 20px auto 0;
+  }
+  
+  .about-wrapper h1 {
+    font-size: 26px;
+  }
+  
+  .about-face {
+    height: 130px;
+    width: 130px;
+  }
+  
+  .about-face img {
+    height: 130px;
+  }
+  
+  .left, .right {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    font-size: 15px;
+    line-height: 23px;
+  }
+  
+  .resume-button {
+    font-size: 13px;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  .resume-button svg {
+    height: 20px;
+    transform: translateY(6px);
+  }
+}
+
+/* Very small screens */
+@media screen and (max-width: 420px) {
+  .about-wrapper {
+    width: 95%;
+    margin: 15px auto 0;
+  }
+  
+  .about-wrapper h1 {
+    font-size: 24px;
+  }
+  
+  .about-face {
+    height: 110px;
+    width: 110px;
+    padding: 5px;
+  }
+  
+  .about-face img {
+    height: 110px;
+  }
+  
+  .left, .right {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 12px;
+  }
+  
+  .resume-button {
+    font-size: 12px;
+    height: 38px;
+    line-height: 38px;
+  }
+  
+  .resume-button svg {
+    height: 16px;
+    transform: translateY(4px);
+  }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 350px) {
+  .about-wrapper {
+    width: 98%;
+    margin: 10px auto 0;
+  }
+  
+  .about-wrapper h1 {
+    font-size: 22px;
+  }
+  
+  .about-face {
+    height: 100px;
+    width: 100px;
+    padding: 4px;
+  }
+  
+  .about-face img {
+    height: 100px;
+  }
+  
+  .left, .right {
+    font-size: 13px;
+    line-height: 20px;
+    padding: 10px;
+  }
+  
+  .resume-button {
+    font-size: 11px;
+    height: 36px;
+    line-height: 36px;
+  }
+}

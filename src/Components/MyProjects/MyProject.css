@@ -1,0 +1,110 @@
+.projects-wrapper {
+    width: 60%;
+    margin: 30px auto 0;
+    text-align: center;
+    font-family: Poppins, serif;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projects-wrapper h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    transition: 80ms ease-in-out;
+}
+
+.projects-wrapper h1 span {
+    color: var(--active-color);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 580px;
+    margin: 10px auto 0;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+    margin-bottom: 50px;
+}
+
+.project-card {
+    flex: 1 0 21%;
+    margin: 0 7px 0;
+    width: available;
+    cursor: pointer;
+    box-shadow: 0 8px 32px #00000026;
+    background-color: var(--icons-bg);
+    height: 150px;
+    width: 230px;
+    backdrop-filter: blur(4px);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    opacity: 0;
+    transition: 150ms ease-in-out;
+    padding-top: 10px;
+}
+
+.project-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.project-image {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.project-name {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.projects-text {
+    padding-top: 10px;
+    transition: 150ms ease-in-out;
+}
+
+.projects-special {
+    color: var(--specials);
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .project-image {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-card {
+        flex: 1 0 45%;
+        margin: 10px;
+    }
+
+    .project-image {
+        height: 90px;
+        width: 90px;
+    }
+}

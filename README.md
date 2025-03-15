@@ -1,7 +1,6 @@
 # Personal Portfolio 👨‍💻
 This is my developer portfolio built using ReactJS.
 
-View it live 👉[here](https://navjeet.tech)👈
 
 <table>
   <tr>

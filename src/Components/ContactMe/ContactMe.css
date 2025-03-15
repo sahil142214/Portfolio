@@ -9,7 +9,6 @@
     /*margin-top: 200px;*/
     transition: 300ms ease-in-out;
     transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-
 }
 
 .contact-wrapper h1 {
@@ -43,7 +42,6 @@
     outline: none;
     padding-left: 10px;
     background-color: var(--body-bg);
-
 }
 
 .contact-inputs textarea {
@@ -71,10 +69,6 @@
     margin-left: -2px;
 }
 
-.contact-inputs textarea:focus {
-    /*height: 96px;*/
-}
-
 
 .send-button {
     margin-top: 20px;
@@ -91,7 +85,6 @@
     cursor: pointer;
     /*transition: 0.5s ease;*/
 }
-
 
 .send-button:hover {
     opacity: 0.8 !important;
@@ -154,7 +147,6 @@
 
 .icon-stroke {
     stroke: var(--text-color);
-
 }
 
 .contact-wrapper h1, .contact-inputs input, .contact-inputs textarea,
@@ -165,3 +157,95 @@
     transition: 100ms ease-in-out;
 }
 
+/* Responsive styles for mobile - won't affect desktop */
+@media screen and (max-width: 768px) {
+    .contact-wrapper {
+        width: 90%;
+        min-width: unset;
+        margin: 30px auto 0;
+    }
+    
+    .contact-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-inputs {
+        width: 100%;
+    }
+    
+    .contact-inputs input, 
+    .contact-inputs textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .contact-info {
+        width: 100%;
+        margin-top: 40px;
+    }
+    
+    .line-break {
+        width: 100%;
+    }
+    
+    .contact-info-header {
+        word-break: break-word;
+    }
+    
+    .contact-wrapper h1 {
+        font-size: 30px;
+    }
+    
+    .contact-footer h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-wrapper {
+        width: 95%;
+        margin: 20px auto 0;
+    }
+    
+    .contact-wrapper h1 {
+        font-size: 26px;
+    }
+    
+    .contact-footer h1 {
+        font-size: 22px;
+    }
+    
+    .contact-info-header {
+        font-size: 16px;
+    }
+    
+    .contact-info-text {
+        font-size: 14px;
+    }
+    
+    .contact-inputs input {
+        height: 40px;
+        font-size: 14px;
+    }
+    
+    .contact-inputs textarea {
+        font-size: 14px;
+        height: 90px;
+    }
+    
+    .send-button {
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+    }
+    
+    .follow-icons {
+        width: 160px;
+    }
+    
+    .follow-icons svg {
+        height: 28px !important;
+        width: 28px !important;
+    }
+}

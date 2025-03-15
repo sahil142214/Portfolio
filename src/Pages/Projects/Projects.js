@@ -1,17 +1,18 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
-import Phone from "../../Components/Phone/Phone";
+import MyProject from "../../Components/MyProjects/MyProject";
 
-const Home = () => {
+const Projects = () => {
     useEffect(() => {
-        document.title = 'Projects • Navjeet'
-    }, [])
+        document.title = 'Projects • Sahil';
+    }, []);
+
     return (
         <div>
-            <Navbar active="Projects"/>
+            <Navbar active="Projects" />
+            <MyProject />
         </div>
-    )
+    );
+};
 
-}
-
-export default Home;
+export default Projects;

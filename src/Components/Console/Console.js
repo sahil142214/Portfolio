@@ -21,7 +21,7 @@ const Console = (props) => {
     let consoleData = {
         '0': [],
         'intro': [{
-            'text': "Hello! I’m Navjeet, another f&#*$%g coder 👨‍💻", 'color': '#1142CC'
+            'text': "Hello! I’m Sahil, another f&#*$%g coder 👨‍💻", 'color': '#1142CC'
         }],
         'facts': [{
             'text': 'Here’s some facts about me', 'color': '#1142CC'
@@ -107,7 +107,7 @@ const Console = (props) => {
             }
         }, 1000);
         setTimeout(() => {
-            window.open("https://github.com/navjeet-py", '_blank');
+            window.open("https://github.com/sahil142214", '_blank');
         }, 3000);
     }
 
@@ -279,7 +279,7 @@ const Console = (props) => {
 
                 <div className="text-div"></div>
                 <div className="input-div">
-                    <p>~navjeet/</p>
+                    <p>~sahil/</p>
                     <span className="console-arrow">❯</span>
                     <input type="text" value={inputValue} autoFocus
                            onChange={inputChange} className="console-input"
@@ -295,7 +295,7 @@ const Console = (props) => {
             <div className='footer-0'>0</div>
             <div className='footer-zsh'><span>zsh</span></div>
             <div className="footer-100">♥ 100%</div>
-            <div className="footer-user"><span>Navjeet’s Macbook</span></div>
+            <div className="footer-user"><span>Sahil’s Macbook</span></div>
         </div>
     </div>)
 }

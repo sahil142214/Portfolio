@@ -35,18 +35,23 @@ const MySkills = () => {
 
         let i = 0;
         let x = setInterval(() => {
-            if (i === 21) {
+            if (i === 22 || i >= iconWrappers.length) {
+                clearInterval(x);
+            } else if (iconWrappers[i]) {
+                iconWrappers[i].style.opacity = 1;
+                iconWrappers[i].style.paddingTop = '0px';
+                i++;
+            } else {
                 clearInterval(x);
             }
-            iconWrappers[i].style.opacity = 1;
-            iconWrappers[i].style.paddingTop = '0px';
-            i++;
-        }, 80)
-
-    })
+        }, 80);
+        
+        // Clean up on unmount
+        return () => clearInterval(x);
+    }, []);
 
     const icons = [
-        ['html', html],
+        ['HTML', html],
         ['CSS', css],
         ['Python', python],
         ['C++', cpp],
@@ -65,33 +70,36 @@ const MySkills = () => {
         ['Solidity', solidity],
         ['Linux', linux],
         ['PHP', php],
-        ['Math', math],
+        ['Math', math]
     ]
 
-    return (<div className="skills-wrapper">
-        <h1>My <span>Skills</span></h1>
-        <p className="skills-text">Here are some of my <span className="skills-special">skills</span> and <span
-            className="skills-special">technologies</span> I've been working with</p>
-        <div className="skills-icons">
-            {
-                icons.map((x, i) => {
-                    return (
-                        <div className="icon-wrapper">
-
-                            <div className="skill-icon-div">
-                                <img className="skill-icon" src={x[1]} alt=""/>
-                                <p className="icon-text">{x[0]}</p>
+    return (
+        <div className="skills-wrapper">
+            <h1>My <span>Skills</span></h1>
+            <p className="skills-text">Here are some of my <span className="skills-special">skills</span> and <span
+                className="skills-special">technologies</span> I've been working with</p>
+            <div className="skills-icons">
+                {
+                    icons.map((x, i) => {
+                        return (
+                            <div className="icon-wrapper" key={i}>
+                                <div className="skill-icon-div">
+                                    {x[0] === 'Math' ? (
+                                        <div className="math-icon">
+                                            <span>∑</span>
+                                        </div>
+                                    ) : (
+                                        <img className="skill-icon" src={x[1]} alt={x[0]} />
+                                    )}
+                                    <p className="icon-text">{x[0]}</p>
+                                </div>
                             </div>
-                        </div>
-
-                    )
-                })
-            }
-
+                        )
+                    })
+                }
+            </div>
         </div>
-
-    </div>)
-
+    )
 }
 
 export default MySkills

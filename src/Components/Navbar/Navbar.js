@@ -2,11 +2,11 @@ import React, {useEffect, useState} from "react";
 import "./Navbar.css"
 import {useNavigate, Link} from "react-router-dom";
 
-
 const Navbar = (props) => {
     const navigate = useNavigate();
-
     const [theme, setTheme] = useState('dark');
+    const [menuOpen, setMenuOpen] = useState(false);
+
     function changeTheme() {
         if (theme === "dark") {
             document.documentElement.style.setProperty('--nav-bg', 'rgb(240, 214, 232)');
@@ -35,18 +35,15 @@ const Navbar = (props) => {
         }
     }
 
-
     useEffect(() => {
-        // changeTheme();
-
         const active = props.active;
-        const menus = document.querySelectorAll('li');
+        const menus = document.querySelectorAll('.menu li');
         menus.forEach((menu) => {
             if (menu.innerText === active) {
                 menu.className = 'active';
             }
-        })
-    })
+        });
+    });
 
     function logoClick() {
         if (window.location.pathname === '/') {
@@ -55,43 +52,59 @@ const Navbar = (props) => {
         navigate('/');
     }
 
-    return (<nav>
-        <div className="nav-header" onClick={logoClick}>
-            <span className="logo">Navjeet.</span>
-            <svg className="logo-tick" xmlns="http://www.w3.org/2000/svg" width="26.67" height="26.67"
-                 viewBox="0 0 26.67 26.67">
-                <path
-                    d="M9.113,4.425A5.111,5.111,0,0,0,12.022,3.22a5.111,5.111,0,0,1,6.628,0,5.111,5.111,0,0,0,2.909,1.205,5.111,5.111,0,0,1,4.687,4.687,5.1,5.1,0,0,0,1.205,2.909,5.111,5.111,0,0,1,0,6.628,5.111,5.111,0,0,0-1.205,2.909,5.111,5.111,0,0,1-4.687,4.687,5.111,5.111,0,0,0-2.909,1.205,5.111,5.111,0,0,1-6.628,0,5.111,5.111,0,0,0-2.909-1.205,5.111,5.111,0,0,1-4.687-4.687A5.111,5.111,0,0,0,3.22,18.649a5.111,5.111,0,0,1,0-6.628A5.111,5.111,0,0,0,4.425,9.113,5.111,5.111,0,0,1,9.113,4.425Zm12.4,8.755a1.667,1.667,0,1,0-2.357-2.357l-5.489,5.489-2.155-2.155a1.667,1.667,0,1,0-2.357,2.357l3.334,3.334a1.667,1.667,0,0,0,2.357,0l6.668-6.668Z"
-                    transform="translate(-2 -2)"
-                    fill='none'/>
-            </svg>
-        </div>
+    function toggleMenu() {
+        setMenuOpen(!menuOpen);
+    }
 
-        <ul className="menu">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/skills">Skills</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            {/*<li><Link to="/">Services</Link></li>*/}
-            <li><Link to="/contact">Contact</Link></li>
-        </ul>
+    function handleMenuItemClick() {
+        if (window.innerWidth <= 768) {
+            setMenuOpen(false);
+        }
+    }
 
-        <div className="theme" onClick={changeTheme}>
-            <svg className="theme-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
-                <path
-                    d="M8.556,28A5.556,5.556,0,0,1,3,22.444V5.778A2.778,2.778,0,0,1,5.778,3h5.556a2.778,2.778,0,0,1,2.778,2.778V22.444A5.556,5.556,0,0,1,8.556,28Zm0,0H25.222A2.778,2.778,0,0,0,28,25.222V19.667a2.778,2.778,0,0,0-2.778-2.778H21.968M14.111,9.032l2.3-2.3a2.778,2.778,0,0,1,3.928,0l3.929,3.929a2.778,2.778,0,0,1,0,3.928L12.483,26.372M8.556,22.444h.014"
-                    transform="translate(-2 -2)" fill="none"
-                    stroke="none"/>
-            </svg>
-            <span>Theme</span>
-            <svg className="theme-arrow" xmlns="http://www.w3.org/2000/svg" width="19.521" height="12.074"
-                 viewBox="0 0 19.521 12.074">
-                <path d="M24.2,349l2.323,2.313-9.761,9.761L7,351.313,9.323,349l7.438,7.438Z"
-                      transform="translate(-7 -349)" fill='none'/>
-            </svg>
-        </div>
-    </nav>)
+    return (
+        <nav>
+            <div className="nav-header" onClick={logoClick}>
+                <span className="logo">Sahil.</span>
+                <svg className="logo-tick" xmlns="http://www.w3.org/2000/svg" width="26.67" height="26.67"
+                     viewBox="0 0 26.67 26.67">
+                    <path
+                        d="M9.113,4.425A5.111,5.111,0,0,0,12.022,3.22a5.111,5.111,0,0,1,6.628,0,5.111,5.111,0,0,0,2.909,1.205,5.111,5.111,0,0,1,4.687,4.687,5.1,5.1,0,0,0,1.205,2.909,5.111,5.111,0,0,1,0,6.628,5.111,5.111,0,0,0-1.205,2.909,5.111,5.111,0,0,1-4.687,4.687,5.111,5.111,0,0,0-2.909,1.205,5.111,5.111,0,0,1-6.628,0,5.111,5.111,0,0,0-2.909-1.205,5.111,5.111,0,0,1-4.687-4.687A5.111,5.111,0,0,0,3.22,18.649a5.111,5.111,0,0,1,0-6.628A5.111,5.111,0,0,0,4.425,9.113,5.111,5.111,0,0,1,9.113,4.425Zm12.4,8.755a1.667,1.667,0,1,0-2.357-2.357l-5.489,5.489-2.155-2.155a1.667,1.667,0,1,0-2.357,2.357l3.334,3.334a1.667,1.667,0,0,0,2.357,0l6.668-6.668Z"
+                        transform="translate(-2 -2)"
+                        fill='none'/>
+                </svg>
+            </div>
 
+            <div className={`menu-toggle ${menuOpen ? 'open' : ''}`} onClick={toggleMenu}>
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
+            </div>
+
+            <ul className={`menu ${menuOpen ? 'open' : ''}`}>
+                <li onClick={handleMenuItemClick}><Link to="/">Home</Link></li>
+                <li onClick={handleMenuItemClick}><Link to="/about">About</Link></li>
+                <li onClick={handleMenuItemClick}><Link to="/skills">Skills</Link></li>
+                <li onClick={handleMenuItemClick}><Link to="/projects">Projects</Link></li>
+                <li onClick={handleMenuItemClick}><Link to="/contact">Contact</Link></li>
+            </ul>
+
+            <div className="theme" onClick={changeTheme}>
+                <svg className="theme-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                    <path
+                        d="M8.556,28A5.556,5.556,0,0,1,3,22.444V5.778A2.778,2.778,0,0,1,5.778,3h5.556a2.778,2.778,0,0,1,2.778,2.778V22.444A5.556,5.556,0,0,1,8.556,28Zm0,0H25.222A2.778,2.778,0,0,0,28,25.222V19.667a2.778,2.778,0,0,0-2.778-2.778H21.968M14.111,9.032l2.3-2.3a2.778,2.778,0,0,1,3.928,0l3.929,3.929a2.778,2.778,0,0,1,0,3.928L12.483,26.372M8.556,22.444h.014"
+                        transform="translate(-2 -2)" fill="none"
+                        stroke="none"/>
+                </svg>
+                <span className="theme-text">Theme</span>
+                <svg className="theme-arrow" xmlns="http://www.w3.org/2000/svg" width="19.521" height="12.074"
+                     viewBox="0 0 19.521 12.074">
+                    <path d="M24.2,349l2.323,2.313-9.761,9.761L7,351.313,9.323,349l7.438,7.438Z"
+                          transform="translate(-7 -349)" fill='none'/>
+                </svg>
+            </div>
+        </nav>
+    );
 }
 
 export default Navbar

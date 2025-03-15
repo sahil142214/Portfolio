@@ -6,3 +6,142 @@
     margin-top: 70px;
 }
 
+/* Mobile view styles - only apply to smaller screens */
+@media screen and (max-width: 992px) {
+    .wrapper {
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mobile-only {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 20px 0;
+    }
+    
+    .device-tabs {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    
+    .device-tab {
+        padding: 8px 15px;
+        margin: 0 5px;
+        background-color: var(--body-bg);
+        color: var(--text-color);
+        border: 1px solid var(--text-color);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        font-family: Poppins, serif;
+    }
+    
+    .device-tab.active {
+        background-color: var(--active-color);
+        color: white;
+        border-color: var(--active-color);
+    }
+    
+    .tab-content {
+        display: none;
+        width: 100%;
+    }
+    
+    .tab-content.active {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* Mobile Console Styles */
+    .responsive-console {
+        width: 100%;
+    }
+    
+    .responsive-console .console {
+        width: 95% !important;
+        margin: 0 auto;
+    }
+}
+
+/* For tablets and smaller screens */
+@media screen and (max-width: 768px) {
+    .responsive-console .console {
+        width: 90% !important;
+    }
+}
+
+/* For mobile phones */
+@media screen and (max-width: 576px) {
+    .wrapper {
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .responsive-console .console {
+        width: 95vw !important; /* Use viewport width */
+        max-width: 95vw;
+        height: auto !important;
+        min-height: 450px !important;
+    }
+    
+    /* Adjust console internals */
+    .responsive-console .console-body {
+        margin-bottom: 15px;
+    }
+    
+    .responsive-console .console-text {
+        margin-left: 15px;
+        font-size: 14px;
+        max-width: 90vw;
+        overflow-wrap: break-word;
+    }
+    
+    .responsive-console .input-div {
+        margin-left: 15px;
+    }
+    
+    .responsive-console .console-input {
+        width: 60vw;
+    }
+    
+    .responsive-console .console-img {
+        max-width: 90%;
+        height: auto !important;
+        max-height: 150px;
+    }
+}
+
+/* Very small devices */
+@media screen and (max-width: 420px) {
+    .responsive-console .console {
+        min-height: 400px !important;
+        font-size: 90%;
+    }
+    
+    .responsive-console .console-header div {
+        height: 10px;
+        width: 10px;
+        margin: 8px 5px;
+    }
+    
+    .responsive-console .console-text {
+        font-size: 12px;
+        margin-left: 10px;
+    }
+    
+    .responsive-console .input-div {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+    
+    .responsive-console .console-input {
+        font-size: 14px;
+        width: 50vw;
+    }
+    
+    .responsive-console .console-footer {
+        font-size: 11px;
+    }
+}

@@ -4,7 +4,7 @@ import MySkills from "../../Components/MySkills/MySkills";
 
 const Home = () => {
     useEffect(() => {
-        document.title = 'Skills • Navjeet'
+        document.title = 'Skills • Sahil'
     }, [])
     return (
         <div>

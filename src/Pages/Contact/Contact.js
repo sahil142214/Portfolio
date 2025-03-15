@@ -4,7 +4,7 @@ import ContactMe from "../../Components/ContactMe/ContactMe";
 
 const Home = () => {
     useEffect(() => {
-        document.title = 'Contact • Navjeet'
+        document.title = 'Contact • Sahil'
     }, [])
     return (
         <div>

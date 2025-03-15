@@ -9,7 +9,6 @@
     align-items: center;
 }
 
-
 .skills-wrapper h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -21,8 +20,8 @@
 .skills-text {
     opacity: 0;
     padding-top: 10px;
-        transition: 150ms ease-in-out;
-
+    transition: 150ms ease-in-out;
+    max-width: 90%;
 }
 
 .skills-wrapper h1 span {
@@ -31,7 +30,6 @@
 
 .skills-special {
     color: var(--specials);
-
 }
 
 .skills-icons {
@@ -51,7 +49,8 @@
     flex: 1 0 21%;
     margin: 0 7px 0;
     width: available;
-
+    display: flex;
+    justify-content: center;
 }
 
 .skill-icon-div {
@@ -69,23 +68,178 @@
     border-radius: 20px;
     box-sizing: border-box;
     border: 1px solid rgba(255, 255, 255, 0.18);
-
     opacity: 0;
     transition: 150ms ease-in-out;
     padding-top: 10px;
-
 }
 
 .skill-icon-div:hover {
     background-color: rgba(255, 255, 255, 0.2);
-
 }
 
 .skill-icon {
     height: 64px;
+    max-width: 70%;
+}
+
+/* Math icon style */
+.math-icon {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.math-icon span {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--specials);
 }
 
 .icon-text {
     margin-top: 10px;
     font-weight: 700;
+    padding: 0 5px;
+    word-break: break-word;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .skills-wrapper {
+        width: 80%;
+    }
+    
+    .skill-icon-div {
+        height: 120px;
+        width: 120px;
+    }
+    
+    .skill-icon {
+        height: 56px;
+    }
+    
+    .math-icon {
+        height: 56px;
+    }
+    
+    .math-icon span {
+        font-size: 46px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .skills-wrapper {
+        width: 90%;
+    }
+    
+    .icon-wrapper {
+        flex: 1 0 25%; /* 4 icons per row */
+    }
+    
+    .skill-icon-div {
+        height: 110px;
+        width: 110px;
+    }
+    
+    .skill-icon {
+        height: 50px;
+    }
+    
+    .math-icon {
+        height: 50px;
+    }
+    
+    .math-icon span {
+        font-size: 42px;
+    }
+    
+    .icon-text {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .skills-wrapper h1 {
+        font-size: 30px;
+    }
+    
+    .icon-wrapper {
+        flex: 1 0 30%; /* 3 icons per row */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .skills-wrapper {
+        width: 95%;
+        margin-top: 20px;
+    }
+    
+    .skills-wrapper h1 {
+        font-size: 26px;
+    }
+    
+    .skills-text {
+        font-size: 14px;
+    }
+    
+    .icon-wrapper {
+        flex: 1 0 40%; /* 2-3 icons per row */
+        margin: 0 5px;
+    }
+    
+    .skill-icon-div {
+        height: 100px;
+        width: 100px;
+        margin-top: 10px;
+    }
+    
+    .skill-icon {
+        height: 42px;
+    }
+    
+    .math-icon {
+        height: 42px;
+    }
+    
+    .math-icon span {
+        font-size: 36px;
+    }
+    
+    .icon-text {
+        font-size: 13px;
+        margin-top: 6px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .skills-wrapper h1 {
+        font-size: 24px;
+    }
+    
+    .icon-wrapper {
+        flex: 1 0 45%; /* 2 icons per row */
+        margin: 0 4px;
+    }
+    
+    .skill-icon-div {
+        height: 90px;
+        width: 90px;
+    }
+    
+    .skill-icon {
+        height: 38px;
+    }
+    
+    .math-icon {
+        height: 38px;
+    }
+    
+    .math-icon span {
+        font-size: 32px;
+    }
+    
+    .icon-text {
+        font-size: 12px;
+        margin-top: 5px;
+    }
 }

@@ -14,16 +14,6 @@ const App = () => {
         setWidth(window.innerWidth);
     }));
 
-
-    if (width < 1100) {
-        return (
-            <div style={{background: "white", height: "100vh", width: "100vw"}}>
-                <h1> Please use a computer device</h1>
-                <h3>If you're already on a computer, try to maximise window.</h3>
-            </div>
-        )
-    }
-
     return (
         <Routes>
             <Route path='/' element={<Home display={display} setDisplay={setDisplay}/>}/>
